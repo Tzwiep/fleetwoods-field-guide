@@ -46,9 +46,10 @@ export function SiteHeader({ dark = false }: { dark?: boolean }) {
         <span>Fleetwood’s Field Guide</span>
       </Link>
       <nav className="primary-nav" aria-label="Field guide sections">
-        <Link href="/#journal">Journal</Link>
         <Link href="/#creatures">Creatures</Link>
         <Link href="/#places">Places</Link>
+        <Link href="/#growing">Growing</Link>
+        <Link href="/#rocks">Rocks &amp; Gems</Link>
         <Link className="index-link" href="/#index">Index <span aria-hidden="true">↗</span></Link>
       </nav>
     </header>

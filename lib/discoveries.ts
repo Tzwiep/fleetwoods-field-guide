@@ -5,6 +5,10 @@ export const photos = {
   beachRocks: '/images/beach-rocks.jpg',
   campingNight: '/images/camping-night.jpg',
   campingTent: '/images/camping-tent.jpg',
+  popupCamperLake: '/images/popup-camper-lake.jpg',
+  popupCamperAutumn: '/images/popup-camper-autumn.jpg',
+  rocksGems: '/images/rocks-gems.jpg',
+  growingStrawberries: '/images/growing-strawberries.jpg',
   legoBuild: '/images/lego-build.jpg',
 } as const;
 
