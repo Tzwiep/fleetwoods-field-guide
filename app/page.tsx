@@ -17,18 +17,59 @@ export default function Home() {
     <>
       <SiteHeader />
       <main>
-        <section className="masthead" aria-labelledby="site-title">
-          <div className="masthead-topline">
-            <p className="eyebrow hero-eyebrow"><span>Est. 2026</span><i aria-hidden="true">—</i><span>Ontario</span></p>
-            <span className="hero-asterisk" aria-hidden="true">*</span>
-          </div>
-          <h1 id="site-title">Fleetwood’s Field Guide <em>to Everything</em></h1>
-          <div className="masthead-foot">
-            <p>Notes, discoveries, important findings, and other things worth remembering.</p>
-            <div className="hero-margin-note" aria-label="Handwritten note: leave room for more">
-              <Annotation tone="rust">leave room for more</Annotation>
-              <svg viewBox="0 0 150 58" aria-hidden="true"><path d="M143 9C105 6 78 16 43 32 30 38 18 44 7 49" /><path d="m18 36-11 13 17 2" /></svg>
-            </div>
+        <section className="journal-hero" aria-labelledby="site-title">
+          <div className="journal-spread">
+            <span className="binding-ring ring-one" aria-hidden="true" />
+            <span className="binding-ring ring-two" aria-hidden="true" />
+            <span className="binding-ring ring-three" aria-hidden="true" />
+
+            <article className="journal-page journal-page-left">
+              <header className="journal-dateline">
+                <time dateTime="2026-09-05">Saturday, September 5, 2026</time>
+                <span>Field book no. 01</span>
+              </header>
+
+              <div className="journal-place-box">
+                <span className="weather-mark" aria-hidden="true">☼</span>
+                <dl>
+                  <div><dt>Place</dt><dd>Ontario / home</dd></div>
+                  <div><dt>Weather</dt><dd>Good for looking</dd></div>
+                </dl>
+              </div>
+
+              <div className="journal-title-block">
+                <p className="journal-label">A small natural-history archive</p>
+                <h1 id="site-title">Fleetwood’s<br />Field Guide <span>to everything</span></h1>
+                <p>Notes, discoveries, important findings, and other things worth remembering.</p>
+              </div>
+
+              <p className="hero-written-note"><span aria-hidden="true">*</span> Write down what happened before you forget.</p>
+              <span className="hero-est">Est. 2026 · Ontario</span>
+            </article>
+
+            <article className="journal-page journal-page-right" aria-label="Subjects under investigation">
+              <header className="journal-page-heading">
+                <p>Subjects under investigation</p>
+                <span>5 / 23</span>
+              </header>
+
+              <ol className="journal-subjects">
+                <li><span>01</span><a href="#creatures">Creatures</a><small>moving / hiding / enormous</small></li>
+                <li><span>02</span><a href="#places">Places</a><small>woods, beaches, somewhere new</small></li>
+                <li><span>03</span><a href="#growing">Growing things</a><small>berries first; vegetables next</small></li>
+                <li><span>04</span><a href="#rocks">Rocks &amp; gems</a><small>heavy, stripey, shiny</small></li>
+                <li><span>05</span><a href="#made">Things I made</a><small>keep all important inventions</small></li>
+              </ol>
+
+              <div className="journal-specimen">
+                <span className="tape journal-tape" aria-hidden="true" />
+                <Image src={photos.rocksGems} alt="A tray of colourful rocks and mineral specimens" width={1600} height={1067} sizes="(max-width: 780px) 80vw, 28vw" />
+                <p>pockets needed for rocks →</p>
+              </div>
+
+              <p className="journal-question">ask: <u>what is it doing?</u></p>
+              <p className="journal-crossout"><del>ordinary</del> important things</p>
+            </article>
           </div>
         </section>
 
@@ -164,27 +205,37 @@ export default function Home() {
 
         <section className="camping-journal" aria-labelledby="camping-title">
           <div className="camping-copy">
-            <p className="section-kicker">Place no. 006 · The pop-up</p>
-            <h2 id="camping-title">We Went<br />Camping</h2>
+            <p className="section-kicker">Place no. 006 · Killbear Provincial Park</p>
+            <h2 id="camping-title">The Pop-Up<br />at Killbear</h2>
             <blockquote>“It gets bigger when you open it.”</blockquote>
-            <p>Our little house arrived folded up. Then the roof went up, the beds came out, and we had a base camp beside the trees and water.</p>
+            <p>Our little house arrived folded up. Then the roof went up, the beds came out, and we had a base camp near the rocks, pines, and Georgian Bay.</p>
             <dl className="camp-list">
-              <div><dt>Our house</dt><dd>The pop-up</dd></div>
+              <div><dt>Base camp</dt><dd>The pop-up</dd></div>
+              <div><dt>Place</dt><dd>Killbear</dd></div>
               <div><dt>Beds</dt><dd>Fold out sideways</dd></div>
-              <div><dt>Marshmallows</dt><dd>Important</dd></div>
+              <div><dt>Water</dt><dd>Georgian Bay</dd></div>
             </dl>
           </div>
           <div className="camping-photos">
             <figure className="camp-photo-large">
-              <Image src={photos.popupCamperAutumn} alt="A pop-up camper beside a calm wooded lake" width={1400} height={933} sizes="(max-width: 900px) 85vw, 48vw" />
-              <figcaption>Base camp · beside the water</figcaption>
+              <Image src={photos.popupCamperForest} alt="An open pop-up camper at a wooded campsite" width={2200} height={1467} sizes="(max-width: 900px) 100vw, 58vw" />
+              <figcaption>Base camp · photo by Andrew Hunt / Unsplash</figcaption>
             </figure>
-            <figure className="camp-photo-small">
-              <span className="tape tape-two" aria-hidden="true" />
-              <Image src={photos.popupCamperLake} alt="A pop-up camper beneath wooded hills by a lake" width={1800} height={3200} sizes="(max-width: 900px) 55vw, 28vw" />
-              <figcaption>Our house, unfolded</figcaption>
-            </figure>
-            <Annotation className="smoke-note" tone="light">beds come out here →</Annotation>
+            <div className="killbear-strip" aria-label="Photographs from Killbear Provincial Park">
+              <figure>
+                <Image src={photos.killbearRockShore} alt="Layered Canadian Shield rock meeting the water at Killbear Provincial Park" width={780} height={520} sizes="(max-width: 900px) 31vw, 18vw" />
+                <figcaption>Rock shore · Ontario Parks</figcaption>
+              </figure>
+              <figure>
+                <Image src={photos.killbearClearWater} alt="Clear blue water surrounded by rock and pine forest at Killbear Provincial Park" width={780} height={520} sizes="(max-width: 900px) 31vw, 18vw" />
+                <figcaption>Clear water · Ontario Parks</figcaption>
+              </figure>
+              <figure>
+                <Image src={photos.killbearShore} alt="A windswept pine silhouetted against a Killbear sunset" width={780} height={520} sizes="(max-width: 900px) 31vw, 18vw" />
+                <figcaption>Last light · Ontario Parks</figcaption>
+              </figure>
+            </div>
+            <Annotation className="smoke-note" tone="light">beds come out both sides →</Annotation>
           </div>
         </section>
 
